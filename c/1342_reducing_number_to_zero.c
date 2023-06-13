@@ -1,3 +1,9 @@
+/*
+    Date: Jun 12, 2023
+    Problem Link: https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+    ---
+    Divide & Conquer Solution
+*/
 #include <stdio.h>
 
 int number_of_steps(int num);
