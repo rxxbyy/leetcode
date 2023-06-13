@@ -1,22 +1,11 @@
 /*
     Date: Jun 12, 2023
     Problem Link: https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+    Diff: Easy
     ---
     Divide & Conquer Solution
 */
 #include <stdio.h>
-
-int number_of_steps(int num);
-
-int main(void)
-{
-    int result;
-
-    result = number_of_steps(123);
-    printf("Result = %d\n", result);
-
-    return 0;
-}
 
 /* number_of_steps: return the numbers of steps to reduce a
     number to zero */
