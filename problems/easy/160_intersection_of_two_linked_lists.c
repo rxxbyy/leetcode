@@ -17,18 +17,19 @@ struct ListNode {
 
 int _linked_list_length(struct ListNode *head);
 
-struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB)
+/* getIntersectionNode: return the node where the given two singly-linked
+    lists intersect */
+struct ListNode *getIntersectionNode(struct ListNode *headA, 
+                                     struct ListNode *headB)
 {
     int diff = _linked_list_length(headA) - _linked_list_length(headB);
-    printf("%d\n", diff);
-    if (diff > 0) {
+
+    if (diff > 0)
         while ((diff--) > 0)
             headA = headA->next;
-    }
-    else {
+    else
         while ((diff++) < 0)
             headB = headB->next;
-    }
 
     while (headA != NULL && headB != NULL) {
         if (headA == headB)
@@ -40,6 +41,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
     return NO_INTERSECTION;
 }
 
+/* _linked_list_length: return the length of a singly-linked-list */
 int _linked_list_length(struct ListNode *head)
 {
     int counter = 0;
